@@ -1,4 +1,3 @@
-import pickle
 
 import pandas as pd
 import streamlit as st
@@ -13,7 +12,7 @@ def recommend(movie):
         recommended_movie.append(movies.iloc[i[0]].title)
     return recommended_movie
 
-with open('similarity.pkl', 'rb') as f:
+with open('movies.pkl', 'rb') as f:
     similarity = pickle.load(f)
 
 with open('movies_dict.pkl', 'rb') as f:
